@@ -1,0 +1,27 @@
+[package]
+name = "nanoclaw-agent-runner"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", features = ["json", "stream"] }
+globwalk = "0.9"
+regex = "1"
+grep-regex = "0.1"
+grep-searcher = "0.1"
+grep-matcher = "0.1"
+rmcp = { version = "0.1", features = ["server", "transport-io"] }
+cron = "0.15"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1", features = ["v4"] }
+async-trait = "0.1"
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+futures = "0.3"
+
+[dev-dependencies]
+tempfile = "3"
